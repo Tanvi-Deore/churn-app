@@ -19,3 +19,15 @@ def insert_data(customerID, prediction):
 
     conn.commit()
     conn.close()
+
+def fetch_data():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    query = "SELECT * FROM churn_predictions"
+    cursor.execute(query)
+
+    data = cursor.fetchall()
+
+    conn.close()
+    return data
