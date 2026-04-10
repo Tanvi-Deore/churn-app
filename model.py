@@ -14,4 +14,4 @@ def predict(input_data_dict):
     df = df.reindex(columns=columns, fill_value=0)
     
     result = model.predict(df)
-    return result[0]
+    return int(result[0])
