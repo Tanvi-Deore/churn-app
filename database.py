@@ -24,7 +24,7 @@ def fetch_data():
     conn = get_connection()
     cursor = conn.cursor()
 
-    query = "SELECT * FROM churn_predictions"
+    query = "SELECT * FROM churn_prediction"
     cursor.execute(query)
 
     data = cursor.fetchall()
